@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Todo app</title>
+  </head>
+  <body>
+    <header class="bg"></header>
+    <main class="container">
+      <header class="header">
+        <h1>Todo</h1>
+        <div class="toggle-theme">
+          <img src="./images/icon-moon.svg" alt="switch" />
+        </div>
+      </header>
+
+      <div class="input-field">
+        <span class="circle"></span>
+        <input type="text" placeholder="Create a new todo..." />
+      </div>
+
+      <div class="tasks-container">
+        <ul class="tasks"></ul>
+        <footer>
+          <div class="count"><span class="num">0</span> items left</div>
+          <div class="filter">
+            <button class="all selected" onclick="filter('all')">All</button>
+            <button class="active" onclick="filter('active')">Active</button>
+            <button class="completed" onclick="filter('completed')">
+              Completed
+            </button>
+          </div>
+          <button class="clear">Clear Completed</button>
+        </footer>
+      </div>
+    </main>
+    <p class="note">Drag and drop to reorder list</p>
+
+    <script src="main.js"></script>
+  </body>
+</html>
