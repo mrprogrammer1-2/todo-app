@@ -97,31 +97,27 @@ function data_of_LS() {
 
 }
 
-function taskClick() {
-     // task click
 
-    }
-    const tasks = document.querySelectorAll(".task")
+const tasks = document.querySelectorAll(".task")
 
-    if (tasks) {
+if (tasks) {
 
-        tasks.forEach(task=> {
-            task.addEventListener("click", ()=> {
-               task.classList.toggle("done")
-               const check = task.querySelector("#check");
-               if (check.checked) {
-                   check.checked = false
-               } else {
-                   check.checked = true
-               }
-               toggleStatus(task.getAttribute("data-id"))
-               
-           })
-           })
-    }
+    tasks.forEach(task=> {
+        task.addEventListener("click", ()=> {
+            task.classList.toggle("done")
+            const check = task.querySelector("#check");
+            if (check.checked) {
+                check.checked = false
+            } else {
+                check.checked = true
+            }
+            toggleStatus(task.getAttribute("data-id"))
+            
+        })
+        })
+}
     
     
-// taskClick()
 
 function toggleStatus(taskId) {
     myArray.forEach(task=> {
